@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #002337;
+    
+}
+
+
+.text{
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    color: #faebd7;
+    
+}
+
+.playlist-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: inline-end;
+    overflow: hidden;
+}
+
+.playlist-container h1{
+    color: antiquewhite;
+    font-size: smaller;
+}
+
+
+.playlist li{
+    padding: 15px 25px;
+    margin-top: 40px;
+    margin: 20px;
+}
+
+
+@media(max-width: 800px){
+    
+}

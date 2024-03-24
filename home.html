@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="home.css">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<header>
+    <nav>
+        <div class="logodiv">
+            <a href="./home.html">Hi Nedya</a>
+        </div>
+        <div class="navbarlinks">
+            <ul>
+                <li><a class="now" href="./home.html">Home</a></li>
+                <li><a href="./playlist.html">Playlist</a></li>
+                <li><a href="./movie.html">Movie</a></li>
+                <li class="dropdown">
+                    <a href="./">??????</a>
+                    <div class="dropdowncontent">
+                        <a href="#">??????</a>
+                        <a href="#">??????</a>
+                        <a href="#">??????</a>
+                    </div>
+                </li>
+                
+                
+                
+            </ul>
+        </div>
+        <a href="#" class="hamburgerbutton">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+    </nav>
+</header>
+
+<body>
+        <div class="wrap">
+            <h1 id="greeting"></h1>
+            <h1 id="clock"></h1>
+        </div>
+        <div class="container">
+            <a href="./tmp.html">
+                <div class="heart"></div>
+            </a>
+
+            </div>
+    
+        </div>
+        
+        <div class="search">
+            <form action="https://www.google.com/search" method="get" class="box">
+                <input type="text" placeholder="Search Anything" name="q">
+                <button type="submit"><img src="./icons8-search-30.svg" alt=""></button>
+            </form>
+        </div>
+
+        
+
+
+
+        
+<script>
+    function clock(){
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        var midday;
+
+        hours = updateTime(hours);
+        minutes = updateTime(minutes);
+        seconds = updateTime(seconds);
+        var name = "Nedya";
+
+        midday = (hours >= 12 ) ? "PM" : "AM";
+        document.getElementById("clock").innerHTML = "<span>" + hours +"</span>" + ":" +"<span>"+ minutes +"</span>"+ ":" +"<span>"+ seconds +"</span>"+"<span>"+ midday +"</span>";
+
+        var time = setTimeout(function(){
+        clock();
+        },1000)
+
+        if (hours < 5) {
+            var greeting = "Three o'clock is always too late or too early for anything you want to do. -Jean Paul Sartre ";
+        }
+        if(hours < 12 && hours > 5){
+            var greeting = "Good Morning "+ name + " Mandi!!!";
+        }
+        if(hours >= 12 && hours <= 18){
+            var greeting = "Good Afternoon "+ name+ " Lagi Ngapain Ned??";
+        }
+        if(hours >= 18 && hours <= 24){
+            var greeting = "Good Evening "+ name + " Asik libur waktunya begadang";
+        }
+        document.getElementById("greeting").innerHTML = greeting;
+    }
+
+function updateTime(k){
+    if (k < 10) {
+        return "0"+k;
+    }else{
+        return k;
+    }
+}
+
+clock();
+
+</script>
+</body>
+</html>

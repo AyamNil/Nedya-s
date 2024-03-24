@@ -1,0 +1,100 @@
+body{
+    background-color: #002337;
+    
+}
+
+.title{
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    color: #faebd7;
+    
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 3rem 0;
+    padding-top: 0;
+    padding-bottom: 0rem;
+    padding-left: 0;
+    padding-right: 0;
+    
+}
+
+.card-Container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.categoryCard{
+    margin: 40px 40px 100px 40px;
+    height: 500px;
+    width: 380px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    transition: 0.3s ease-in;
+    text-decoration: none;
+}
+.categoryCard:hover{
+    transform: scale(1.08);
+}
+#cardOne{
+    background-image: linear-gradient(to bottom, rgba(190, 0, 165, 0.245), rgba(96, 0, 34, 0.76)), url(Django.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cardTwo{
+    background-image: linear-gradient(to bottom, rgba(190, 0, 165, 0.245), rgba(96, 0, 34, 0.76)), url(Knives.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cardThree{
+    background-image: linear-gradient(to bottom, rgba(190, 0, 165, 0.245), rgba(96, 0, 34, 0.76)), url(Smith.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cardFour{
+    background-image: linear-gradient(to bottom, rgba(190, 0, 165, 0.245), rgba(96, 0, 34, 0.76)), url(Seren.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cardFive{
+    background-image: linear-gradient(to bottom, rgba(190, 0, 165, 0.245), rgba(96, 0, 34, 0.76)), url(5fa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#cardSix{
+    background-image: linear-gradient(to bottom, rgba(190, 0, 165, 0.245), rgba(96, 0, 34, 0.76)), url(Tfios.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cardSeven{
+    background-image: linear-gradient(to bottom, rgba(190, 0, 165, 0.245), rgba(96, 0, 34, 0.76)), url(HJTIY.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cardEight{
+    background-image: linear-gradient(to bottom, rgba(190, 0, 165, 0.245), rgba(96, 0, 34, 0.76)), url(BDr.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.categoryCard h2{
+    text-decoration: none;
+    align-self: center;
+    padding-top: 380px;
+}

@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #002337;
+    color: antiquewhite;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    margin-top: 2.5%;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    padding: 10%;
+    padding-bottom: 2%;
+    padding-top: 5%;
+}
+
+h3{
+    margin: 40px;
+    font-size: 30px;
+}
+
+img{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    text-align: center;
+    
+  }
+  
+  #message {
+    font-weight: bold;
+    color: rgb(254, 243, 255);
+    margin-top: 20px;
+    font-size: 50px;
+    animation: scrollingText 10s linear infinite;
+  }
+
+  #question{
+    font-size: 60px;
+  }
+
+  button{
+    font-size: 45px;
+    padding: 20px;
+    margin: 25px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    border-radius: 20px;transition: background-color 0.5s ease;
+}
+
+
+  button:hover {
+    background-color: rgb(86, 3, 56);
+    cursor: pointer;
+    color: beige;
+  }
+
+  @keyframes scrollingText {
+    0% {
+      transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-75%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  .firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(255, 58, 212);
+    border-radius: 50%;
+    animation: firework-animation 1s ease-in-out;
+  }
+  
+  @keyframes firework-animation {
+    0% {
+      transform: translate(0, 0);
+    }
+    80% {
+      transform: translate(0, -200px);
+    }
+    100% {
+      transform: translate(0, -200px) scale(5);
+    }
+  }
+  

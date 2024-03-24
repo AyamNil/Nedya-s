@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bucket List</title>
+    <link rel="stylesheet" type="text/css" href="Bucketlist.css">
+  </head>
+  <body>
+    <h1>Bucket List</h1>
+    <ul id="list"></ul>
+    <input type="text" id="item">
+    <button id="add-button">Add</button>
+    <button id="reset-button">Reset All</button> <!-- Add the reset button -->
+  </body>
+  <script>
+    const list = document.getElementById("list");
+    const itemInput = document.getElementById("item");
+    const addButton = document.getElementById("add-button");
+    const resetButton = document.getElementById("reset-button"); // Reference the reset button
+
+    // Load the saved bucket list from localStorage
+    if (localStorage.getItem("bucketList")) {
+      list.innerHTML = localStorage.getItem("bucketList");
+      attachDeleteEventListeners(); // Attach event listeners after loading items
+    }
+
+    addButton.addEventListener("click", function() {
+      const newItem = document.createElement("li");
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+
+      // Create a delete button
+      const deleteButton = document.createElement("button");
+      deleteButton.textContent = "Delete";
+
+      newItem.appendChild(checkbox);
+      newItem.innerHTML += itemInput.value;
+      newItem.appendChild(deleteButton);
+
+      list.appendChild(newItem);
+      itemInput.value = ""; // Clear the input field
+
+      localStorage.setItem("bucketList", list.innerHTML);
+      attachDeleteEventListeners(); // Attach the delete event listener to the new item
+    });
+
+    resetButton.addEventListener("click", function() {
+      list.innerHTML = ""; // Clear the list
+      localStorage.removeItem("bucketList"); // Remove the saved list from localStorage
+    });
+
+    function attachDeleteEventListeners() {
+      const deleteButtons = document.querySelectorAll("li button");
+
+      deleteButtons.forEach((button) => {
+        button.addEventListener("click", function() {
+          const listItem = this.parentElement;
+          listItem.remove();
+          localStorage.setItem("bucketList", list.innerHTML);
+        });
+      });
+    }
+  </script>
+</html>

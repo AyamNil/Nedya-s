@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./master.css">
+    <link rel="stylesheet" href="./tmp.css">
+    
+</head>
+<header>
+    <nav>
+        <div class="logodiv">
+            <a href="./home.html">Hi Nedya</a>
+        </div>
+        <div class="navbarlinks">
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./playlist.html">Playlist</a></li>
+                <li><a href="./movie.html">Movie</a></li>
+                <li class="dropdown">
+                    <a href="./">??????</a>
+                    <div class="dropdowncontent">
+                        <a href="#">??????</a>
+                        <a href="#">??????</a>
+                        <a href="#">??????</a>
+                    </div>
+                </li>
+                
+                
+                
+            </ul>
+        </div>
+        <a href="#" class="hamburgerbutton">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+    </nav>
+</header>
+<body>
+    <div id="container">
+        <h2 id="question">Is today's your birthday?</h2>
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+        <div id="message" style="display:none"></div>
+      </div>
+      
+</body>
+<script>
+    const yesBtn = document.querySelector("#yesBtn");
+const noBtn = document.querySelector("#noBtn");
+const message = document.querySelector("#message");
+
+yesBtn.addEventListener("click", function() {
+  message.style.display = "block";
+  message.innerHTML = "Happy Birthday!!! Happy 20 Nedya wish You all the best";
+  const confetti = document.createElement("div") ;
+  const yesButton = document.getElementById("yes-button");
+  const firework = document.createElement("div");
+  firework.classList.add("firework");
+  firework.style.left = Math.random() * window.innerWidth + "px";
+  firework.style.top = window.innerHeight + "px";
+  document.body.appendChild(firework);
+});
+
+noBtn.addEventListener("click", function() {
+  message.style.display = "block";
+  message.innerHTML = "Come back later.";
+});
+
+</script>
+</html>
